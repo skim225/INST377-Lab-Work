@@ -4,51 +4,56 @@
         <title>Sean Kim</title>
         <link rel='stylesheet' href='styles.css'/>
     </head>
-    <body class='wrapper default'>
+    <body class='default wrapper'>
         <h1 class='title'>Sean Kim Lab 2: CSS Selectors</h1>
-        <!--Need to add a selectors thing on this top row-->
-        <div class='nav '>
-            <a href='selectors.html'>Selectors</a>
-            <a href='index.html'>Main Page</a>
+        <div>
+            <nav>
+                <a href='selectors.html'>Selectors</a>
+                <a href='index.html'>Main Page</a>
+            </nav>
         </div>
-        <h2>First, the basics.</h2>
+        <h2 class='default'>First, the basics.</h2>
         <p>You need the follwing to build your website.</p>
         <div class='section_1'>
             <ul>
-            <li>HTML and CSS</li>
-            <li>Javascript</li>
-            <li>Node.js</li>
-            <li>And other web development frameworks</li>
-        </ul>
-        <ol>
-            <p>You should list your top 3 goals for the class below.</p>
-            <li>Learn front-end web design</li>
-            <li>Learn new programming languages</li>
-            <li>Learn how to work with others in a technical space</li>
-            <li>Learn popular web dev frameworks</li>
-        </ol>
+                <li>HTML and CSS</li>
+                <li>Javascript</li>
+                <li>Node.js</li>
+                <li>And other web development frameworks</li>
+            </ul>
+            <p class='default'>You should list your top 3 goals for the class below.</p>
+            <ol class='default'>
+                <li>Learn front-end web design</li>
+                <li>Learn new programming languages</li>
+                <li>Learn how to work with others in a technical space</li>
+                <li>Learn popular web dev frameworks</li>
+            </ol>
         </div>
-        <div class='section_2'><h2>Let's Try Some Inline Elements</h2>
+        <div class='section_2'>
+            <h2>Let's Try Some Inline Elements</h2>
             <p class='subtitle'>Sometimes you want to <em>draw attention to something</em> in a line of text.</p>
             <p class='subtitle'>Sometimes you want to <strong>strongly emphasize something</strong> in the text.</p>
             <p class='subtitle'>Sometimes you want to <em><strong>do both.</strong></em></p>
         </div>
         <div class='section_3'>
             <h2>Empty Elements</h2>
-            <p class='subtitle'>Soft line breaks can't wrap anything.<br/>Neither can image tags, or hard lines.</p>
-            <p class='subtitle'>Add a hard line under here, and break the previous two lines using a soft line break.</p>
+            <p>Soft line breaks can't wrap anything.<br/>Neither can image tags, or hard lines.</p>
+            <p>Add a hard line under here, and break the previous two lines using a soft line break.</p>
             <hr/>
         </div>
         <div class='section_4'>
-            <h2 class='text'>Images</h2>
-            <img src='images/onigiri_1.png' alt='Smiling onigiri with seaweed flakes'/>
-            <img src='images/onigiri_2.png' alt='Smiling onigiri'/>
-            <img src='images/onigiri_3.png' alt='Embarassed onigiri'/>
-            <img src='images/onigiri_4.png' alt='Smiling onigiri covered in seaweed'/>
+            <h2>Images</h2>
+            <div class='carousel'>
+                <div class='slides'>
+                    <img src='images/onigiri_1.png' alt='Smiling onigiri with seaweed flakes'/>
+                    <img src='images/onigiri_2.png' alt='Smiling onigiri'/>
+                    <img src='images/onigiri_3.png' alt='Embarassed onigiri'/>
+                    <img src='images/onigiri_4.png' alt='Smiling onigiri covered in seaweed'/>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a href='https://github.com/skim225/INST377-Lab-Work.git' target='_blank'>My github repository can be found here.</a>
         </div>
     </body>
-</html>
-<!--<img src='images/onigiri_1.png' alt='Smiling onigiri with seaweed flakes'/>
-<img src='images/onigiri_2.png' alt='Smiling onigiri'/>
-<img src='images/onigiri_3.png' alt='Embarassed onigiri'/>
-<img src='images/onigiri_4.png' alt='Smiling onigiri covered in seaweed'/>-->       
+</html>    
