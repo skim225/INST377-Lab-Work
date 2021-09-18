@@ -14,7 +14,6 @@ a:hover {
 }
 
 .wrapper {
-    display: flex;
     justify-content: center;
     font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
 }
@@ -43,7 +42,7 @@ a:hover {
 
 .menu {
     border: 1px solid #fff;
-    
+    width: 900px;
     display: flex;
     justify-content: space-between;
 }
@@ -141,16 +140,10 @@ a:hover {
     width: 300px;
 }
 
-@media only screen and (max-width: 400px) {
-    
-}
 
 @media only screen and (min-width: 961px) {
-    .title,
-    .menu,
-    .footer {
-        width: 100%;
+    .section {
         display: flex;
-        
+        flex-wrap: wrap;
     }
 }
