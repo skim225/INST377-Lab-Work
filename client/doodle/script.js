@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
 
-        }, 30)
+        }, 20)
     }
 
     function gameOver() {
