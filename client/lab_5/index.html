@@ -7,17 +7,52 @@
         <meta name='viewport'
             content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     </head>
-    <body>
+    <body class='wrapper'>
         <div class='container'>
-            <div class='wrapper'>
-                <header>
-                    <div class='title is-full is-centered'>
+            <div>
+                <header class='columns mb-6'>
+                    <div class='column title is-full'>
                         <h1>Sean Kim Lab 5: HTML Forms, HTTP Methods, REST APIs</h1>
                     </div>
                 </header>
-                <div>
-                    <form ></form>
+                <div class='columns is-vcentered is-centered'>
+                    <div class='box has-text-black has-background-white is-one-fifth'>
+                        <form action='' method='get' class='speaker-form'>
+                            <div class='column is-4'>
+                                <label for='first-name'>First Name</label>
+                                <input id='first-name' name='first-name' type='text'/>
+                            </div>
+                        </form>
+                        <form action='' method='get' class='speaker-form'>
+                            <div class='column is-6'>
+                                <label for='food-preference'>Food Preference</label>
+                                <input id='food-preference' name='food-preference' type='text'/>
+                            </div>
+                        </form>
+                        <fieldset class='column'>
+                            <legend>Veggie or Vegan?</legend>
+                            <input id='veggie-vegan-1'
+                                    name='veggie-vegan'
+                                    type='radio'
+                                    value='Veggie' />
+                            <label for='veggie-vegan-1'>Veggie</label>
+                            <input id='veggie-vegan-2'
+                                    name='veggie-vegan'
+                                    type='radio'
+                                    value='Vegan' />
+                            <label for='veggie-vegan-2'>Vegan</label>
+                        </fieldset>
+                        <div class='button is-success'>
+                            <a class="button is-success">
+                                Submit
+                            </a>
+                        </div>
+                    </div>
+                    <div class='box has-text-black has-background-white column is-three-fifths ml-5'>
+                        <p>This is going to be something in two weeks.</p>
+                    </div>
                 </div>
+
             </div>
         </div>
         <script src="script.js"></script>
