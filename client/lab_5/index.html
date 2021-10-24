@@ -17,36 +17,30 @@
                 </header>
                 <div class='columns is-vcentered is-centered'>
                     <div class='box has-text-black has-background-white is-one-fifth'>
-                        <form action='' method='get' class='speaker-form'>
+                        <form action='/api' method='get' class='speaker-form'>
                             <div class='column is-4'>
                                 <label for='first-name'>First Name</label>
                                 <input id='first-name' name='first-name' type='text'/>
                             </div>
-                        </form>
-                        <form action='' method='get' class='speaker-form'>
                             <div class='column is-6'>
                                 <label for='food-preference'>Food Preference</label>
                                 <input id='food-preference' name='food-preference' type='text'/>
                             </div>
-                        </form>
                         <fieldset class='column'>
-                            <legend>Veggie or Vegan?</legend>
+                            <label for='veggie-vegan-1' class='column'>Veggie or Vegan?</label>
                             <input id='veggie-vegan-1'
                                     name='veggie-vegan'
                                     type='radio'
-                                    value='Veggie' />
-                            <label for='veggie-vegan-1'>Veggie</label>
+                                    value='Yes' />
+                            <label for='veggie-vegan-1'>Yes</label>
                             <input id='veggie-vegan-2'
                                     name='veggie-vegan'
                                     type='radio'
-                                    value='Vegan' />
-                            <label for='veggie-vegan-2'>Vegan</label>
+                                    value='No' />
+                            <label for='veggie-vegan-2'>No</label>
                         </fieldset>
-                        <div class='button is-success'>
-                            <a class="button is-success">
-                                Submit
-                            </a>
-                        </div>
+                        <button type='submit' class='button is-success'>Submit</button>
+                        </form>
                     </div>
                     <div class='box has-text-black has-background-white column is-three-fifths ml-5'>
                         <p>This is going to be something in two weeks.</p>
