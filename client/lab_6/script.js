@@ -16,7 +16,7 @@ async function windowActions() {
     return cities.filter((place) => {
       // here we need to figure out if the city or state matches what was searched
       const regex = new RegExp(wordToMatch, 'gi');
-      return place.city.match(regex) || place.state.match(regex);
+      return place.name.match(regex) || place.category.match(regex);
     });
   }
 
@@ -28,19 +28,18 @@ async function windowActions() {
     const matchArray = findMatches(event.target.value, cities);
     const html = matchArray.map((place) => {
       const regex = new RegExp(event.target.value, 'gi');
-      const cityName = place.city.replace(regex, `<span class="h1">${event.target
+      const cityName = place.name.replace(regex, `<span class="h1">${event.target
         .value}</span>`);
       return `
                 <li>
-                <span class="name">${place.city}, ${place.state}</span>
+                <span class="name">${place.name}, ${place.state}</span>
                 <span class="population">${numberWithCommas(place.population)}</span>
                 </li> 
                 `;
     }).join('');
     suggestions.innerHTML = html;
   }
-
-  searchInput.addEventListener('change', displayMatches);
+  
   searchInput.addEventListener('keyup', (evt) => { displayMatches(evt); });
 }
 
