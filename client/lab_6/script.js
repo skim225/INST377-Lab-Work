@@ -1,8 +1,3 @@
-// addEventListener(async(event) => {
-//   const results = await fetch('/api');
-//   const json = results.json();
-// });
-
 async function windowActions() {
   const endpoint = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
   const request = await fetch(endpoint);
@@ -10,33 +5,31 @@ async function windowActions() {
   const searchInput = document.querySelector('.search');
   const suggestions = document.querySelector('.suggestions');
 
-  // function displayMatches
-
   function findMatches(wordToMatch, cities) {
     return cities.filter((place) => {
-      // here we need to figure out if the city or state matches what was searched
       const regex = new RegExp(wordToMatch, 'gi');
-      return place.name.match(regex) || place.category.match(regex);
+      return (place.name.match(regex) 
+      || place.category.match(regex) 
+      || place.address_line_1.match(regex) 
+      || place.city.match(regex) 
+      || place.zip.match(regex));
     });
   }
 
-  function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  }
-
   function displayMatches(event) {
-    const matchArray = findMatches(event.target.value, cities);
+    const matchArray = findMatches(event.target.value, arrayName);
     const html = matchArray.map((place) => {
-      const regex = new RegExp(event.target.value, 'gi');
-      const cityName = place.name.replace(regex, `<span class="h1">${event.target
-        .value}</span>`);
+      const regex = new RegExp(event, 'gi');
       return `
-                <li>
-                <span class="name">${place.name}, ${place.state}</span>
-                <span class="population">${numberWithCommas(place.population)}</span>
-                </li> 
-                `;
-    }).join('');
+        <li>
+          <h1>${place.name}</h1>
+          <h3>${place.category}</h3>
+          <p>${place.address_line_1}</p>
+          <p>${place.city}</p>
+          <p>${place.zip}</p>
+        </li> 
+      `;
+    });
     suggestions.innerHTML = html;
   }
   
